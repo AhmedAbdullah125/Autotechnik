@@ -1,0 +1,188 @@
+.mostPopular {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 80px;
+
+    .mostPopular-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span,
+        a {
+            font-size: 24;
+            font-weight: 500;
+            color: $main;
+            text-decoration: none;
+        }
+    }
+
+    .most-pop-products-cont {
+        // display: grid;
+        // grid-template-columns: repeat(4, 1fr);
+        // gap: 9px;
+
+        // @media (max-width: 1200px) {
+        //     grid-template-columns: repeat(3, 1fr);
+        // }
+
+        // @media (max-width: 991px) {
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
+        // @media (max-width: 767px) {
+        //     grid-template-columns: 1fr;
+
+        // }
+        .swiper{
+            padding-bottom: 40px;
+        }
+        
+        .product {
+            border-radius: 12px;
+            padding: 13px;
+
+            .img-cont {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-color: #F9F9F9;
+                padding: 61px 0;
+
+                .img-figure {
+                    width: 165px;
+                    height: 206px;
+                    aspect-ratio: 165/206;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .offer {
+                    position: absolute;
+                    top: 16px;
+                    inset-inline-end: 16px;
+
+                    .red-btn {
+                        padding: 10px 24px;
+                    }
+                }
+
+                .rates {
+                    position: absolute;
+                    bottom: 20px;
+                    inset-inline-end: 16px;
+                    display: flex;
+                    align-items: center;
+
+                    .rate {
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-inline-start: 8px;
+                        color: $main;
+                    }
+
+                    i {
+                        color: #FA8232;
+                        fill: #FA8232;
+                        font-size: 16px;
+                        margin-inline-start: 4px;
+                    }
+
+                    .rate-qunt {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #9A9A9A;
+                    }
+                }
+            }
+        }
+
+        .discount {
+            background-color: #E6EBEF;
+            padding: 2px 13px;
+            color: $main;
+
+            span {
+                font-size: 12px;
+                font-weight: 400;
+                color: $main;
+            }
+        }
+
+        .product-details {
+            padding: 13px;
+            background-color: #FBFBFB;
+
+            .product-name {
+                span {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $main;
+                }
+            }
+
+            .product-brand {
+                span {
+                    color: #667085;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+
+            .product-price {
+                display: flex;
+                gap: 8px;
+                margin-top: 5px;
+                margin-bottom: 8px;
+
+                .price {
+                    font-size: 20px;
+                    font-weight: 700;
+                    margin-inline-end: 5px;
+                }
+
+                span {
+                    color: #667085;
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+
+                .new-pric {
+                    .price {
+                        color: $hover;
+                    }
+                }
+            }
+        }
+
+        .product-spics {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .spic {
+                display: flex;
+                gap: 4px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #667085;
+                align-items: center;
+
+                i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
