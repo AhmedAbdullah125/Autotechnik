@@ -129,6 +129,11 @@
                     font-size: 16px;
                     font-weight: 500;
                     color: $main;
+                    height: 24px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
                 }
             }
 
@@ -137,6 +142,11 @@
                     color: #667085;
                     font-size: 14px;
                     font-weight: 400;
+                    height: 19px;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
                 }
             }
 
