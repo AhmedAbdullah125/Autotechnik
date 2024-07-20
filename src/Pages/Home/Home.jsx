@@ -2,6 +2,7 @@ import Banner from './Banner';
 import CategoriesSamples from './CategoriesSamples';
 import MostPopularAll from './MostPopularAll';
 import SmallBanner from './SmallBanner';
+import SmallerBanner from './SmallerBanner';
 
 export default function Home() {
 
@@ -11,7 +12,7 @@ export default function Home() {
       <CategoriesSamples></CategoriesSamples>
       <SmallBanner></SmallBanner>
       <MostPopularAll></MostPopularAll>
-      <SmallBanner></SmallBanner>
+      <SmallerBanner></SmallerBanner>
       <MostPopularAll></MostPopularAll>
       
     </div>

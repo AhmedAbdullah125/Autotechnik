@@ -55,7 +55,7 @@ export default function MostPopular2() {
                                 slidesPerView: 2,
                             },
                             100: {
-                                slidesPerView: 1,
+                                slidesPerView: 2,
                             },
                         }}
 
