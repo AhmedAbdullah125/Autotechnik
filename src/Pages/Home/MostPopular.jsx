@@ -73,7 +73,7 @@ export default function MostPopular() {
                                             </div>
                                             {ele.offer ?
                                                 <div className="offer">
-                                                    <a className="red-btn" href='/'>خصم 40 %</a>
+                                                    <a className="red-btn" href='/'>الاكثر طلبا</a>
                                                 </div>
                                                 : ""}
                                         </div>
