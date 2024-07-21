@@ -636,6 +636,9 @@ header {
 //////////////////////NavHeader/////////////////////
 .NavHeader{
   border-bottom: 1px solid #E5E7EB;
+  @media (max-width: 991px) {
+    display: none;
+  }
 }
 .NavHeader-cont {
   display: flex;
@@ -668,4 +671,18 @@ header {
   @media (max-width: 991px) {
     flex-direction: column;
   }
+}
+
+
+
+.hidden-in-lg{
+  display: none;
+  @media (max-width: 991px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      font-size: 20px;
+    }
+  } 
 }
