@@ -3,7 +3,9 @@
     flex-direction: column;
     gap: 32px;
     margin-top: 80px;
-
+    @media (max-width: 400px) {
+        padding: 3px;
+    }
     .mostPopular-heading {
         display: flex;
         align-items: center;
@@ -42,6 +44,9 @@
             border-radius: 12px;
             padding: 13px;
             overflow: hidden;
+            @media (max-width: 400px) {
+            padding: 3px;
+            }
 
             .img-cont {
                 display: flex;

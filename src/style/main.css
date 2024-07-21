@@ -2297,6 +2297,11 @@ footer {
   gap: 32px;
   margin-top: 80px;
 }
+@media (max-width: 400px) {
+  .mostPopular {
+    padding: 3px;
+  }
+}
 .mostPopular .mostPopular-heading {
   display: flex;
   align-items: center;
@@ -2316,6 +2321,11 @@ footer {
   border-radius: 12px;
   padding: 13px;
   overflow: hidden;
+}
+@media (max-width: 400px) {
+  .mostPopular .most-pop-products-cont .product {
+    padding: 3px;
+  }
 }
 .mostPopular .most-pop-products-cont .product .img-cont {
   display: flex;

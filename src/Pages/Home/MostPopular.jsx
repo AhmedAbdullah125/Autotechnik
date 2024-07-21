@@ -34,7 +34,7 @@ export default function MostPopular() {
                             NewsSwiperRef.current = swiper;
                         }}
                         modules={[Pagination]}
-                        spaceBetween={9}
+                        spaceBetween={0}
                         slidesPerView={4}
                         loop={true}
                         autoplay={true}
