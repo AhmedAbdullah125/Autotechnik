@@ -1929,6 +1929,49 @@ textarea.form-input {
 }
 
 /*                       contact-section                           */
+footer {
+  background-color: #030712;
+  padding: 95px 0;
+}
+footer .footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  footer .footer {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 50px;
+  }
+}
+footer .collumn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+footer .collumn a {
+  text-decoration: none;
+  max-width: 180px;
+}
+footer .collumn .title a {
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+footer .collumn .text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+footer .collumn .text a {
+  color: rgb(221, 221, 221);
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .uper-header {
   background-color: var(--sec-color);
   display: flex;
@@ -2430,11 +2473,29 @@ textarea.form-input {
   font-size: 20px;
 }
 
+* ::-moz-selection {
+  color: var(--white-color);
+  background: var(--main-hover);
+}
+
+* ::selection {
+  color: var(--white-color);
+  background: var(--main-hover);
+}
+
 .lower-header {
   border-top: 1px solid #E5E7EB;
   min-height: 48px;
   display: flex;
   align-items: center;
+}
+.lower-header ::-moz-selection {
+  color: var(--white-color);
+  background: var(--main-color);
+}
+.lower-header ::selection {
+  color: var(--white-color);
+  background: var(--main-color);
 }
 @media (max-width: 991px) {
   .lower-header {
@@ -2485,9 +2546,11 @@ textarea.form-input {
   font-family: 500;
   color: var(--main-color);
 }
-.lower-header .lower-header-cont .l-side .user-info, .lower-header .lower-header-cont .l-side a {
+.lower-header .lower-header-cont .l-side .user-info,
+.lower-header .lower-header-cont .l-side a {
   transition: all 0.3s ease-in-out;
 }
-.lower-header .lower-header-cont .l-side .user-info:hover, .lower-header .lower-header-cont .l-side a:hover {
+.lower-header .lower-header-cont .l-side .user-info:hover,
+.lower-header .lower-header-cont .l-side a:hover {
   color: var(--main-hover);
 }/*# sourceMappingURL=main.css.map */

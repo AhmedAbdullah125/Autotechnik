@@ -1,8 +1,20 @@
+*{
+    ::selection {
+        color: $white;
+        background: $hover;
+    }
+}
 .lower-header {
     border-top: 1px solid #E5E7EB;
     min-height: 48px;
     display: flex;
     align-items: center;
+
+    ::selection {
+        color: $white;
+        background: $main;
+    }
+
     @media (max-width: 991px) {
         display: none;
     }
@@ -32,6 +44,7 @@
             display: flex;
             align-items: center;
             gap: 33px;
+
             @media (max-width: 1200px) {
                 gap: 32px;
             }
@@ -46,13 +59,15 @@
             display: flex;
             align-items: center;
             gap: 16px;
-            .user-profile .user-info{
+
+            .user-profile .user-info {
                 font-size: 15px;
                 font-family: 500;
                 color: $main;
             }
 
-            .user-info ,a{
+            .user-info,
+            a {
                 @include tr;
 
                 &:hover {
