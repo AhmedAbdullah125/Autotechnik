@@ -1,0 +1,65 @@
+.lower-header {
+    border-top: 1px solid #E5E7EB;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 991px) {
+        display: none;
+    }
+
+    .lower-header-cont {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            color: $main;
+            text-decoration: none;
+            @include tr;
+
+            &:hover {
+                color: $hover;
+            }
+        }
+
+        @media (max-width: 1440px) {
+            flex-direction: column;
+            gap: 14px;
+            padding: 12px;
+        }
+
+        .r-side {
+            display: flex;
+            align-items: center;
+            gap: 33px;
+            @media (max-width: 1200px) {
+                gap: 32px;
+            }
+
+            a {
+                font-size: 14px;
+                font-size: 500;
+            }
+        }
+
+        .l-side {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            .user-profile .user-info{
+                font-size: 15px;
+                font-family: 500;
+                color: $main;
+            }
+
+            .user-info ,a{
+                @include tr;
+
+                &:hover {
+                    color: $hover;
+                }
+            }
+
+        }
+    }
+}

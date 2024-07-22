@@ -141,6 +141,10 @@ header {
   padding: 18px 0;
   transition: all 0.3s ease-in-out;
   justify-content: space-between;
+  margin-inline-end: -40px ;
+  @include max-991 {
+    margin-inline-end: 0px ;
+  }
 }
 
 .big-menu>li a {
@@ -379,6 +383,10 @@ header {
 
 .user-profile {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .user-profile .user-cont {
@@ -634,16 +642,19 @@ header {
 
 
 //////////////////////NavHeader/////////////////////
-.NavHeader{
+.NavHeader {
   border-bottom: 1px solid #E5E7EB;
+
   @media (max-width: 991px) {
     display: none;
   }
 }
+
 .NavHeader-cont {
   display: flex;
   justify-content: space-between;
-  padding:  12px 0;
+  padding: 12px 0;
+
   .right-side,
   .left-side {
     display: flex;
@@ -653,36 +664,67 @@ header {
       text-decoration: none;
       font-weight: 500;
       font-size: 14px;
+      @include tr;
+
+      &:hover {
+        color: $hover;
+      }
+
     }
 
     font-size: 14px;
     font-weight: 500;
-    color: #6B7280 ;
+    color: #6B7280;
   }
-  .user-profile .user-info{
-    color: #6B7280 ;
+
+  .user-profile .user-info {
+    color: #6B7280;
+    @include tr;
+
+    &:hover {
+      color: $hover;
+    }
+
   }
+
   .right-side {
     gap: 24px;
   }
+
   .left-side {
     gap: 18px;
+    
   }
+
   @media (max-width: 991px) {
     flex-direction: column;
   }
+
+  .flags-menue {
+    min-width: 100px;
+    text-align: center;
+
+  }
+}
+
+.flag {
+  width: 27px;
+  height: 18px;
+  border-radius: 4px;
 }
 
 
 
-.hidden-in-lg{
+.hidden-in-lg {
   display: none;
+
   @media (max-width: 991px) {
     display: flex;
     align-items: center;
     justify-content: center;
-    span{
+
+    span {
       font-size: 20px;
     }
-  } 
+  }
 }

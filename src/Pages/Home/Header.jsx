@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/Header/logo.png'
 import UpperHeader from './UpperHeader'
 import NavHeader from './NavHeader'
-import HeaderContainer from './HeaderContainer'
+import HeaderContainer from './HeaderContainer';
+import LowerHeader from './LowerHeader';
 export default function Header() {
 
     function openNav() {
@@ -19,6 +20,7 @@ export default function Header() {
             <UpperHeader></UpperHeader>
             <NavHeader></NavHeader>
             <HeaderContainer></HeaderContainer>
+            <LowerHeader>   </LowerHeader>
         </header>
     )
 }

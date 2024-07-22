@@ -516,6 +516,12 @@ header {
   padding: 18px 0;
   transition: all 0.3s ease-in-out;
   justify-content: space-between;
+  margin-inline-end: -40px;
+}
+@media only screen and (max-width: 991px) {
+  .nav-header {
+    margin-inline-end: 0px;
+  }
 }
 
 .big-menu > li a {
@@ -754,6 +760,9 @@ header {
 
 .user-profile {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .user-profile .user-cont {
@@ -999,9 +1008,18 @@ header {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+.NavHeader-cont .right-side a:hover,
+.NavHeader-cont .left-side a:hover {
+  color: var(--main-hover);
 }
 .NavHeader-cont .user-profile .user-info {
   color: #6B7280;
+  transition: all 0.3s ease-in-out;
+}
+.NavHeader-cont .user-profile .user-info:hover {
+  color: var(--main-hover);
 }
 .NavHeader-cont .right-side {
   gap: 24px;
@@ -1013,6 +1031,16 @@ header {
   .NavHeader-cont {
     flex-direction: column;
   }
+}
+.NavHeader-cont .flags-menue {
+  min-width: 100px;
+  text-align: center;
+}
+
+.flag {
+  width: 27px;
+  height: 18px;
+  border-radius: 4px;
 }
 
 .hidden-in-lg {
@@ -2400,4 +2428,66 @@ textarea.form-input {
 }
 .mostPopular .most-pop-products-cont .product-spics .spic i {
   font-size: 20px;
+}
+
+.lower-header {
+  border-top: 1px solid #E5E7EB;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .lower-header {
+    display: none;
+  }
+}
+.lower-header .lower-header-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lower-header .lower-header-cont a {
+  color: var(--main-color);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.lower-header .lower-header-cont a:hover {
+  color: var(--main-hover);
+}
+@media (max-width: 1440px) {
+  .lower-header .lower-header-cont {
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px;
+  }
+}
+.lower-header .lower-header-cont .r-side {
+  display: flex;
+  align-items: center;
+  gap: 33px;
+}
+@media (max-width: 1200px) {
+  .lower-header .lower-header-cont .r-side {
+    gap: 32px;
+  }
+}
+.lower-header .lower-header-cont .r-side a {
+  font-size: 14px;
+  font-size: 500;
+}
+.lower-header .lower-header-cont .l-side {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lower-header .lower-header-cont .l-side .user-profile .user-info {
+  font-size: 15px;
+  font-family: 500;
+  color: var(--main-color);
+}
+.lower-header .lower-header-cont .l-side .user-info, .lower-header .lower-header-cont .l-side a {
+  transition: all 0.3s ease-in-out;
+}
+.lower-header .lower-header-cont .l-side .user-info:hover, .lower-header .lower-header-cont .l-side a:hover {
+  color: var(--main-hover);
 }/*# sourceMappingURL=main.css.map */
