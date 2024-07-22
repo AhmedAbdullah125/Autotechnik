@@ -116,6 +116,17 @@
             order: 1;
         }
     }
+    
 }
 
-
+.swiper-pagination-bullet-active{
+    background: $hover !important;
+}
+.swiper-pagination-bullet{
+    width: 16px !important;
+    height: 16px !important;
+    @media (max-width: 1440px) {
+        width: 10px !important;
+    height: 10px !important;
+    }
+}
