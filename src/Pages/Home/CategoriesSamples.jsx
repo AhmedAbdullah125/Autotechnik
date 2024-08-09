@@ -38,18 +38,21 @@ export default function CategoriesSamples() {
                             NewsSwiperRef.current = swiper;
                         }}
                         modules={[Pagination]}
-                        spaceBetween={30}
+                        spaceBetween={5}
                         slidesPerView={8}
                         loop={true}
                         autoplay={true}
                         pagination={true}
                         navigation={false}
                         breakpoints={{
-                            1200: {
+                            1440: {
                                 slidesPerView: 8,
                             },
+                            1200: {
+                                slidesPerView: 6,
+                            },
                             991: {
-                                slidesPerView: 5,
+                                slidesPerView: 4,
                             },
                             768: {
                                 slidesPerView: 3,
@@ -58,7 +61,7 @@ export default function CategoriesSamples() {
                                 slidesPerView: 2,
                             },
                             100: {
-                                slidesPerView: 2,
+                                slidesPerView: 1,
                             },
                         }}
 
@@ -77,6 +80,12 @@ export default function CategoriesSamples() {
                         )}
 
                     </Swiper>
+                    <div onClick={() => NewsSwiperRef.current.slidePrev()} className="swiper-button-prev" >
+                            <i className="iconsax" icon-name="arrow-left"></i> 
+                        </div>
+                        <div onClick={() => NewsSwiperRef.current.slideNext()}  className="swiper-button-next" >
+                            <i className="iconsax" icon-name="arrow-right"></i> 
+                        </div>
                 </div>
             </div>
         </section>

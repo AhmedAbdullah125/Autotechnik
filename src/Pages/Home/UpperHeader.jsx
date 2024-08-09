@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 export default function UpperHeader() {
-    const opening = new Date("8/1/2024");//
+    const opening = new Date("10/1/2024");//
     const today = new Date();//
     // const month = today.getMonth() + 1;
     // const year = today.getFullYear();
