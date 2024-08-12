@@ -29,27 +29,30 @@ export default function CategoriesSamples() {
         { id: 7, img: categ8, name: "زيت سيارة" },
     ]
     return (
-        <section className="categories-samples">
+        <section className="categories-samples home-swiper">
             <div className="container">
-            <h2>تسوق حسب الفئة</h2>
+                <h2>تسوق حسب الفئة</h2>
                 <div className="category-slider">
                     <Swiper
                         onBeforeInit={(swiper) => {
                             NewsSwiperRef.current = swiper;
                         }}
                         modules={[Pagination]}
-                        spaceBetween={5}
+                        spaceBetween={15}
                         slidesPerView={8}
                         loop={true}
                         autoplay={true}
                         pagination={true}
                         navigation={false}
                         breakpoints={{
-                            1440: {
+                            2000: {
                                 slidesPerView: 8,
                             },
+                            1440: {
+                                slidesPerView: 7,
+                            },
                             1200: {
-                                slidesPerView: 6,
+                                slidesPerView: 5,
                             },
                             991: {
                                 slidesPerView: 4,
@@ -81,11 +84,11 @@ export default function CategoriesSamples() {
 
                     </Swiper>
                     <div onClick={() => NewsSwiperRef.current.slidePrev()} className="swiper-button-prev" >
-                            <i className="iconsax" icon-name="arrow-left"></i> 
-                        </div>
-                        <div onClick={() => NewsSwiperRef.current.slideNext()}  className="swiper-button-next" >
-                            <i className="iconsax" icon-name="arrow-right"></i> 
-                        </div>
+                        <i className="iconsax" icon-name="arrow-left"></i>
+                    </div>
+                    <div onClick={() => NewsSwiperRef.current.slideNext()} className="swiper-button-next" >
+                        <i className="iconsax" icon-name="arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </section>

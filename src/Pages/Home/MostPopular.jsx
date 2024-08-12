@@ -13,16 +13,17 @@ import img4 from '../../assets/Main/categoriesSamples/4.png';
 
 let products = [
   { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img1, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
-  { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img2, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
-  { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img3, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
-  { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img4, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: true },
+  { id: 2, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img2, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
+  { id: 3, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img3, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
+  { id: 4, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img4, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: true },
+  { id: 5, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img1, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: true },
 ]
 
 export default function MostPopular() {
   const NewsSwiperRef = useRef(null);
 
   return (
-    <div className='mostPopular container'>
+    <div className='mostPopular container home-swiper'>
             <div className="mostPopular-heading">
                 <span>الاكثر انتشارا</span>
                 <Link to='/'>شاهد الكل</Link>
@@ -106,7 +107,12 @@ export default function MostPopular() {
                             )
                         }
                     </Swiper>
-
+                    <div onClick={() => NewsSwiperRef.current.slidePrev()} className="swiper-button-prev" >
+                        <i className="iconsax" icon-name="arrow-left"></i>
+                    </div>
+                    <div onClick={() => NewsSwiperRef.current.slideNext()} className="swiper-button-next" >
+                        <i className="iconsax" icon-name="arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </div>

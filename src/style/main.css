@@ -2221,36 +2221,47 @@ footer .collumn .text a {
     display: flex !important;
   }
 }
-.categories-samples .swiper-pagination-fraction,
-.categories-samples .swiper-pagination-custom,
-.categories-samples .swiper-horizontal > .swiper-pagination-bullets,
-.categories-samples .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: var(--swiper-pagination-bottom, 0px);
-}
 .categories-samples .swiper {
   padding-bottom: 40px;
 }
-.categories-samples .swiper-button-next::after,
-.categories-samples .swiper-button-prev::after {
-  content: "";
+
+.home-swiper .swiper-pagination-fraction,
+.home-swiper .swiper-pagination-custom,
+.home-swiper .swiper-horizontal > .swiper-pagination-bullets,
+.home-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: var(--swiper-pagination-bottom, 0px);
 }
-.categories-samples .swiper-button-next, .categories-samples .swiper-button-prev {
+.home-swiper .swiper-button-next::after,
+.home-swiper .swiper-button-prev::after {
+  content: "" !important;
+}
+.home-swiper .swiper-button-next,
+.home-swiper .swiper-button-prev {
   top: 50%;
   transform: translateY(-50%);
 }
-.categories-samples .swiper-button-next i,
-.categories-samples .swiper-button-prev i {
+.home-swiper .swiper-button-next i,
+.home-swiper .swiper-button-prev i {
   color: #4F4B4B;
   padding: 12px;
   font-size: 30px;
   border-radius: 50%;
   background-color: var(--white-color);
+  box-shadow: 0px 0px 15px #eee;
 }
-.categories-samples .swiper-button-prev {
+.home-swiper .swiper-button-prev {
   inset-inline-end: -22px;
 }
-.categories-samples .swiper-button-next {
+.home-swiper .swiper-button-next {
   inset-inline-start: -22px;
+}
+@media (max-width: 600px) {
+  .home-swiper .swiper-button-prev {
+    inset-inline-end: 30px;
+  }
+  .home-swiper .swiper-button-next {
+    inset-inline-start: 30px;
+  }
 }
 
 .small-banner {
@@ -2341,6 +2352,10 @@ footer .collumn .text a {
 }
 .smaller .small-banner .overlay {
   justify-content: center;
+}
+
+.mostPopular-cont {
+  position: relative;
 }
 
 .mostPopular {
