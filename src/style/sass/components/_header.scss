@@ -150,7 +150,7 @@ header {
 
 .big-menu>li a {
   color: $main;
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 500;
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
@@ -160,9 +160,9 @@ header {
   }
 }
 
-.big-menu>li.active a {
-  color: $hover;
-}
+// .big-menu>li.active a {
+//   color: $hover;
+// }
 
 .nav-header .big-menu {
   display: flex;
@@ -175,7 +175,8 @@ header {
   i {
     margin-inline-end: 12px;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 300;
+    color: $hover;
   }
 
   li a {

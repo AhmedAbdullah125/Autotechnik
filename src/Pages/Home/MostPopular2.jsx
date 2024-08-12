@@ -13,17 +13,31 @@ import img3 from '../../assets/Main/categoriesSamples/1.png';
 import img4 from '../../assets/Main/categoriesSamples/2.png';
 
 let products = [
-    { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img4, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
-    { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img2, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: true },
-    { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img3, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
-    { id: 1, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img1, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false },
+    { id: 5, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img4, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false ,love:false},
+    { id: 5, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img2, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: true  ,love:true},
+    { id: 6, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img3, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false ,love:false},
+    { id: 7, name: "زيت سيارات جودة عالية", rate: "4.7", rateQuantity: "125", img: img1, discount: "20", brand: "ماركة موبل", newPrice: "1,050,000", oldPrice: "1,020,000", miles: "38,500", date: 2022, gear: "اوتوماتيك", offer: false ,love:false},
 ]
+function setFavourite(id) {
+    if (products[id].love == false) {
+        products[id].love = true;
+        document.getElementById(id).style.color = "#FD0003";
+        document.getElementById(id).classList.add("fa-solid");
+        document.getElementById(id).classList.remove("fa-regular");
+    }
+    else{
+        products[id].love = false;
+        document.getElementById(id).style.color = "#252525";
+        document.getElementById(id).classList.remove("fa-solid");
+        document.getElementById(id).classList.add("fa-regular");
+    }
 
+}
 export default function MostPopular2() {
     const NewsSwiperRef = useRef(null);
 
     return (
-        <div className='mostPopular container'>
+        <div className='mostPopular container home-swiper'>
             <div className="mostPopular-heading">
                 <span>الاكثر انتشارا</span>
                 <Link to='/'>شاهد الكل</Link>
@@ -35,7 +49,7 @@ export default function MostPopular2() {
                             NewsSwiperRef.current = swiper;
                         }}
                         modules={[Pagination]}
-                        spaceBetween={9}
+                        spaceBetween={0}
                         slidesPerView={4}
                         loop={true}
                         autoplay={true}
@@ -49,13 +63,13 @@ export default function MostPopular2() {
                                 slidesPerView: 3,
                             },
                             768: {
-                                slidesPerView: 3,
+                                slidesPerView: 2,
                             },
                             540: {
-                                slidesPerView: 2,
+                                slidesPerView: 1,
                             },
                             100: {
-                                slidesPerView: 2,
+                                slidesPerView: 1,
                             },
                         }}
 
@@ -72,9 +86,15 @@ export default function MostPopular2() {
                                             <div className="rates">
                                                 <span className='rate-qunt'>({ele.rateQuantity})</span><i class="fa-solid fa-star"></i><span className='rate'>{ele.rate}</span>
                                             </div>
+                                            <div className="order-cart">
+                                                <i class="iconsax" icon-name="shopping-cart"></i>
+                                            </div>
+                                            <div className="order-heart order-cart">
+                                                <i class={ele.love?"fa-heart fa-solid":"fa-heart fa-regular"} id={ele.id} onClick={() => setFavourite(ele.id)} style={{ color: ele.love ? "#FD0003" : "" }} ></i>
+                                            </div>
                                             {ele.offer ?
                                                 <div className="offer">
-                                                    <a className="red-btn" href='/'>خصم 40 %</a>
+                                                    <a className="red-btn" href='/'>خصم 40%</a>
                                                 </div>
                                                 : ""}
                                         </div>
@@ -107,7 +127,12 @@ export default function MostPopular2() {
                             )
                         }
                     </Swiper>
-
+                    <div onClick={() => NewsSwiperRef.current.slidePrev()} className="swiper-button-prev" >
+                        <i className="iconsax" icon-name="arrow-left"></i>
+                    </div>
+                    <div onClick={() => NewsSwiperRef.current.slideNext()} className="swiper-button-next" >
+                        <i className="iconsax" icon-name="arrow-right"></i>
+                    </div>
                 </div>
             </div>
         </div>

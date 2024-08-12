@@ -80,7 +80,7 @@
                 .offer {
                     position: absolute;
                     top: 16px;
-                    inset-inline-end: 16px;
+                    inset-inline-start: 16px;
 
                     .red-btn {
                         padding: 10px 24px;
@@ -96,7 +96,7 @@
                 .rates {
                     position: absolute;
                     bottom: 20px;
-                    inset-inline-end: 16px;
+                    inset-inline-start: 21px;
                     display: flex;
                     align-items: center;
 
@@ -119,6 +119,35 @@
                         font-weight: 500;
                         color: #9A9A9A;
                     }
+                }
+                .order-cart{
+                    position: absolute;
+                    bottom: 20px;
+                    inset-inline-end: 21px;
+                    display: flex;
+                    align-items: center;
+                    background-color: $white;
+                    padding: 8px;
+                    box-shadow: 0px 0px 15px #eee;
+                    border-radius: 50%;
+                    i{
+                        font-size: 25px;
+                        color: $hover;
+                    }
+                }
+                .order-heart{
+                    bottom: unset;
+                    top: 20px;
+                    background-color: transparent;
+                    box-shadow: none;
+                    i{
+                        color: $main;
+                        @include tr;
+                        &:hover{
+                            color: $hover;
+                        }
+                    }
+
                 }
             }
         }

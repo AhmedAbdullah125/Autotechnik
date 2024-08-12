@@ -526,16 +526,12 @@ header {
 
 .big-menu > li a {
   color: var(--main-color);
-  font-size: 16px;
+  font-size: 11px;
   font-weight: 500;
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
 }
 .big-menu > li a:hover {
-  color: var(--main-hover);
-}
-
-.big-menu > li.active a {
   color: var(--main-hover);
 }
 
@@ -550,7 +546,8 @@ header {
 .nav-header .big-menu i {
   margin-inline-end: 12px;
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 300;
+  color: var(--main-hover);
 }
 .nav-header .big-menu li a {
   display: flex;
@@ -2050,6 +2047,11 @@ footer .collumn .text a {
   max-width: 710px;
   padding-inline-start: calc((100vw - 1352px) / 2);
 }
+@media (min-width: 1440px) {
+  .banner .banner-title {
+    max-width: unset;
+  }
+}
 @media (max-width: 1440px) {
   .banner .banner-title {
     padding-inline-start: calc((100vw - 1170px) / 2);
@@ -2250,10 +2252,10 @@ footer .collumn .text a {
   box-shadow: 0px 0px 15px #eee;
 }
 .home-swiper .swiper-button-prev {
-  inset-inline-end: -22px;
+  inset-inline-end: -15px;
 }
 .home-swiper .swiper-button-next {
-  inset-inline-start: -22px;
+  inset-inline-start: -15px;
 }
 @media (max-width: 600px) {
   .home-swiper .swiper-button-prev {
@@ -2420,7 +2422,7 @@ footer .collumn .text a {
 .mostPopular .most-pop-products-cont .product .img-cont .offer {
   position: absolute;
   top: 16px;
-  inset-inline-end: 16px;
+  inset-inline-start: 16px;
 }
 .mostPopular .most-pop-products-cont .product .img-cont .offer .red-btn {
   padding: 10px 24px;
@@ -2434,7 +2436,7 @@ footer .collumn .text a {
 .mostPopular .most-pop-products-cont .product .img-cont .rates {
   position: absolute;
   bottom: 20px;
-  inset-inline-end: 16px;
+  inset-inline-start: 21px;
   display: flex;
   align-items: center;
 }
@@ -2454,6 +2456,34 @@ footer .collumn .text a {
   font-size: 14px;
   font-weight: 500;
   color: #9A9A9A;
+}
+.mostPopular .most-pop-products-cont .product .img-cont .order-cart {
+  position: absolute;
+  bottom: 20px;
+  inset-inline-end: 21px;
+  display: flex;
+  align-items: center;
+  background-color: var(--white-color);
+  padding: 8px;
+  box-shadow: 0px 0px 15px #eee;
+  border-radius: 50%;
+}
+.mostPopular .most-pop-products-cont .product .img-cont .order-cart i {
+  font-size: 25px;
+  color: var(--main-hover);
+}
+.mostPopular .most-pop-products-cont .product .img-cont .order-heart {
+  bottom: unset;
+  top: 20px;
+  background-color: transparent;
+  box-shadow: none;
+}
+.mostPopular .most-pop-products-cont .product .img-cont .order-heart i {
+  color: var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+.mostPopular .most-pop-products-cont .product .img-cont .order-heart i:hover {
+  color: var(--main-hover);
 }
 .mostPopular .most-pop-products-cont .discount {
   background-color: #E6EBEF;

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import flag from '../../assets/Header/egypy.png'
 // import profile from '../../assets/profile-1.png'
 import logo from '../../assets/Header/logo.png'
@@ -47,10 +47,61 @@ export default function HeaderContainer() {
                         </div>
                         <ul className="big-menu list-unstyled">
                             <li className="active">
-                                <Link to="/account">
-                                    <i class="iconsax" icon-name="user-2"></i>
-                                    الحساب
-                                </Link>
+                                <div className="user-profile dropdown">
+                                    <div className="user-cont dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" >
+                                                <i class="iconsax" icon-name="user-2"></i>
+                                        <div className="user-info">
+                                            <div >
+                                                الحساب
+                                            </div>
+                                            <i className="iconsax" icon-name="chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <ul className="profile-menu dropdown-menu">
+                                        <li>
+                                            <a href="/account/general">
+                                            <i className="iconsax" icon-name="basket-tick-1"></i>
+                                                <span>طلباتي</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/orders/01">
+                                                <i className="iconsax" icon-name="map-2"></i>
+                                                <span>عناويني الخاصة</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/#contact">
+                                                <i className="iconsax" icon-name="award-3"></i>
+                                                <span>خدماتي</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/#contact">
+                                                <i className="iconsax" icon-name="money-5"></i>
+                                                <span>رصيدي</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/#contact">
+                                                <i className="iconsax" icon-name="user-1-tag"></i>
+                                                <span>حسابي الشخصي</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <NavLink href="/#contact">
+                                                <i className="iconsax" icon-name="question-message"></i>
+                                                <span> مساعدة ؟</span>
+                                            </NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink href="/login" className="logout">
+                                                <i className="iconsax" icon-name="logout-2"></i>
+                                                <span>تسجيل الخروج</span>
+                                            </NavLink>
+                                        </li>
+                                    </ul>
+                                </div>
                             </li>
                             <li>
                                 <a href="/#stadium">

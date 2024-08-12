@@ -14,7 +14,6 @@ export default function UpperHeader() {
     let diffHours = Math.round((differance -  (diffIndays*1000*60*60*24))/1000/60/60)
     let diffMins = Math.round((differance -  (diffIndays*1000*60*60*24)-(diffHours*1000*60*60))/1000/60)
     let diffSecond = Math.round((differance -  (diffIndays*1000*60*60*24)-(diffHours*1000*60*60)-(diffMins*1000*60))/1000)
-    console.log(diffIndays+ "/" +diffHours+ "/" +diffMins+ "/" +diffSecond );
 
 
 
