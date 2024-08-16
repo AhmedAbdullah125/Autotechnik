@@ -97,15 +97,15 @@ export default function ProductSwiper() {
                     direction={"horizontal"}
                     breakpoints={{
                         1200: {
-                            slidesPerView: 6,
+                            slidesPerView: 8,
                             pagination: true,
                         },
                         768: {
-                            slidesPerView: 4,
+                            slidesPerView: 6,
                             pagination: true,
                         },
                         540: {
-                            slidesPerView: 3,
+                            slidesPerView: 4,
                             pagination: true,
 
                         },

@@ -2666,6 +2666,14 @@ footer .collumn .text a {
   height: 480px;
   width: 100%;
 }
+@media (max-width: 767px) {
+  .product .review .product-slider {
+    height: 50vh;
+  }
+}
+.product .review .product-slider .swiper-slide {
+  height: 100%;
+}
 @media (max-width: 1200px) {
   .product .review .product-slider {
     width: 100%;
@@ -2685,8 +2693,11 @@ footer .collumn .text a {
   justify-content: center;
   aspect-ratio: 681/480;
 }
+.product .review .product-slider .swiper .productImg .product-imgContainer .fancyPost {
+  height: 100%;
+}
 .product .review .product-slider .swiper .productImg .product-imgContainer img {
-  height: 480px;
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2743,6 +2754,12 @@ footer .collumn .text a {
   gap: 6px;
   align-items: center;
   margin-bottom: 14px;
+}
+@media (max-width: 991px) {
+  .product .product-details .productr-rating {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
 }
 .product .product-details .productr-rating .stars {
   display: flex;
@@ -3047,7 +3064,7 @@ footer .collumn .text a {
   justify-content: center;
   border-radius: 8px;
   background-color: #ECFDF3;
-  padding: 10px 0;
+  padding: 10px;
   gap: 10px;
 }
 .product .product-details .eshara span {
@@ -3059,7 +3076,8 @@ footer .collumn .text a {
   color: #039855;
 }
 .product .product-details .eshara .exclamation {
-  width: 16px;
+  width: 100%;
+  max-width: 16px;
   height: 16px;
   border-radius: 50%;
   color: #039855;
