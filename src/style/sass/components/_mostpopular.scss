@@ -224,33 +224,33 @@
             }
         }
 
-        .product-spics {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+    }
+}
+.product-spics {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 
-            @media (max-width: 540px) {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
+    @media (max-width: 540px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-            @media (max-width: 440px) {
-                display: grid;
-                grid-template-columns: 1fr;
-            }
+    @media (max-width: 440px) {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
-            .spic {
-                display: flex;
-                gap: 4px;
-                font-size: 14px;
-                font-weight: 400;
-                color: #667085;
-                align-items: center;
+    .spic {
+        display: flex;
+        gap: 4px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #667085;
+        align-items: center;
 
-                i {
-                    font-size: 20px;
-                }
-            }
+        i {
+            font-size: 20px;
         }
     }
 }

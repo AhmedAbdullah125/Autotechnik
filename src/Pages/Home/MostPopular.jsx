@@ -27,7 +27,7 @@ function setFavourite(id) {
         document.getElementById(id).classList.add("fa-solid");
         document.getElementById(id).classList.remove("fa-regular");
     }
-    else{
+    else {
         products[id].love = false;
         document.getElementById(id).style.color = "#252525";
         document.getElementById(id).classList.remove("fa-solid");
@@ -55,7 +55,7 @@ export default function MostPopular() {
                         slidesPerView={4}
                         loop={true}
                         autoplay={true}
-                        pagination={true}
+                        pagination={false}
                         navigation={false}
                         breakpoints={{
                             1200: {
@@ -82,9 +82,11 @@ export default function MostPopular() {
                                 <SwiperSlide>
                                     <div className="product" key={ele.id}>
                                         <div className="img-cont">
-                                            <figure className='img-figure'>
-                                                <LazyLoadImage src={ele.img} alt='product'></LazyLoadImage>
-                                            </figure>
+                                            <Link to="/product" >
+                                                <figure className='img-figure'>
+                                                    <LazyLoadImage src={ele.img} alt='product'></LazyLoadImage>
+                                                </figure>
+                                            </Link>
                                             <div className="rates">
                                                 <span className='rate-qunt'>({ele.rateQuantity})</span><i class="fa-solid fa-star"></i><span className='rate'>{ele.rate}</span>
                                             </div>
@@ -92,7 +94,7 @@ export default function MostPopular() {
                                                 <i class="iconsax" icon-name="shopping-cart"></i>
                                             </div>
                                             <div className="order-heart order-cart">
-                                                <i class={ele.love?"fa-heart fa-solid":"fa-heart fa-regular"} id={ele.id} onClick={() => setFavourite(ele.id)} style={{ color: ele.love ? "#FD0003" : "" }} ></i>
+                                                <i class={ele.love ? "fa-heart fa-solid" : "fa-heart fa-regular"} id={ele.id} onClick={() => setFavourite(ele.id)} style={{ color: ele.love ? "#FD0003" : "" }} ></i>
                                             </div>
                                             {ele.offer ?
                                                 <div className="offer">
@@ -103,27 +105,29 @@ export default function MostPopular() {
                                         <div className="discount">
                                             <span>{ele.discount}% تخفيض علي المنتج</span>
                                         </div>
-                                        <div className="product-details">
-                                            <div className="product-name">
-                                                <span>{ele.name}</span>
-                                            </div>
-                                            <div className="product-brand">
-                                                <span>{ele.brand}</span>
-                                            </div>
-                                            <div className="product-price">
-                                                <div className="new-pric">
-                                                    <span className='price'>{ele.newPrice}</span><span>ج.م</span>
+                                        <Link to="/product"  >
+                                            <div className="product-details">
+                                                <div className="product-name">
+                                                    <span>{ele.name}</span>
                                                 </div>
-                                                <div className="old-pric">
-                                                    <span className='price'>{ele.oldPrice}</span><span>ج.م</span>
+                                                <div className="product-brand">
+                                                    <span>{ele.brand}</span>
+                                                </div>
+                                                <div className="product-price">
+                                                    <div className="new-pric">
+                                                        <span className='price'>{ele.newPrice}</span><span>ج.م</span>
+                                                    </div>
+                                                    <div className="old-pric">
+                                                        <span className='price'>{ele.oldPrice}</span><span>ج.م</span>
+                                                    </div>
+                                                </div>
+                                                <div className="product-spics">
+                                                    <div className="spic"><i class="iconsax" icon-name="speedometer"></i><span>{ele.miles} كم</span></div>
+                                                    <div className="spic"><i class="iconsax" icon-name="calendar-1"></i><span>{ele.date}</span></div>
+                                                    <div className="spic"><i class="fa-solid fa-gears"></i><span>{ele.gear}</span></div>
                                                 </div>
                                             </div>
-                                            <div className="product-spics">
-                                                <div className="spic"><i class="iconsax" icon-name="speedometer"></i><span>{ele.miles} كم</span></div>
-                                                <div className="spic"><i class="iconsax" icon-name="calendar-1"></i><span>{ele.date}</span></div>
-                                                <div className="spic"><i class="fa-solid fa-gears"></i><span>{ele.gear}</span></div>
-                                            </div>
-                                        </div>
+                                        </Link>
                                     </div>
                                 </SwiperSlide>
                             )
